@@ -7,7 +7,7 @@ function start() {
     $('.main-content .left .js-section').each(function() {
         $bodyheight += $(this).outerHeight(true);
     });
-    $("body").css("height", +$bodyheight + ($(window).height() /40 * 100) + "px");
+    $("body").css("height", +$bodyheight + ($(window).height() /50 * 100) + "px");
 }
     
 start();
