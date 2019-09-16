@@ -1,0 +1,59 @@
+/*
+Theme Name: AchoendovV2
+Version: 2.0
+Description: Portfolio theme V2.
+Author: D. Achoendov
+Author URI: https://www.achoendov.nl
+*/
+
+@font-face {
+	font-family: 'lunchtype22';
+	src: url('fonts/lunchtype/lunchtype22-regular-web.ttf');
+}@font-face {
+	font-family: 'lunchtype22 light';
+	src: url('fonts/lunchtype/lunchtype22-light-web.ttf');
+}@font-face {
+	font-family: 'lunchtype22 medium';
+	src: url('fonts/lunchtype/lunchtype22-medium-web.ttf');
+}@font-face {
+	font-family: 'Graphik';
+	font-style: normal;
+	font-weight: normal;
+	src: url('fonts/graphik/Graphik-Regular.ttf');
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	transition: all 300ms cubic-bezier(1,.13,.42,.91);
+	background-color: #000;
+	overflow-x: hidden;
+}
+
+body.scroll-lock {
+	overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 1319px) {
+
+}
+
+@media only screen and (max-width: 992px) {
+
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 400px) {
+
+}
+
