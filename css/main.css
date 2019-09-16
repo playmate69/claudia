@@ -86,11 +86,11 @@ form {
 }
 
 .a-bottom--vignette {
-    background-image: -webkit-gradient(linear,left bottom,left top,from(#141414),to(rgba(20,20,20,0)));
-    background-image: -webkit-linear-gradient(bottom,#141414 0,rgba(20,20,20,0) 100%);
-    background-image: -moz- oldlinear-gradient(bottom,#141414 0,rgba(20,20,20,0) 100%);
-    background-image: -o-linear-gradient(bottom,#141414 0,rgba(20,20,20,0) 100%);
-    background-image: linear-gradient(to top,#141414 0,rgba(20,20,20,0) 100%);
+    background-image: -webkit-gradient(linear,left bottom,left top,from(#000),to(rgba(20,20,20,0)));
+    background-image: -webkit-linear-gradient(bottom,#000 0,rgba(20,20,20,0) 100%);
+    background-image: -moz- oldlinear-gradient(bottom,#000 0,rgba(20,20,20,0) 100%);
+    background-image: -o-linear-gradient(bottom,#000 0,rgba(20,20,20,0) 100%);
+    background-image: linear-gradient(to top,#000 0,rgba(20,20,20,0) 100%);
     -webkit-background-size: 100% 100%;
     -moz-background-size: 100% 100%;
     -o-background-size: 100% 100%;
@@ -99,12 +99,8 @@ form {
     background-repeat: repeat-x;
     background-color: transparent;
     width: 100%;
-    height: 50vh;
+    height: 40vh;
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: .65;
 }
 
 .a-flip {
@@ -199,6 +195,11 @@ form {
 .a-table--cell {
 	display: table-cell;
 	vertical-align: middle;
+}
+
+.a-cover--center {
+    object-fit: cover;
+    object-position: center;
 }
 
 .a-flex {
