@@ -61,7 +61,7 @@ body.scroll-lock {
 
 .char-hide > .char {
 	font-size: 40px;
-	font-weight: lighter;
+	font-weight: bolder;
 }
 
 /* start content css */
