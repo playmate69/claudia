@@ -25,6 +25,47 @@ body.scroll-lock {
     display: none;
 }
 
+.loader {
+	background: #000;
+}
+
+.count {
+	margin-bottom: 3rem;
+}
+
+.count > .inner {
+	font-size: 40px;
+	text-transform: lowercase;
+}
+
+.progress {
+    height: 1px;
+    width: 33.333333vw;
+    background: #868686;
+}
+
+.progress-bar > .inner {
+	width: 100%;
+	height: 1px;
+	background: #fff;
+}
+
+.preloader {
+	height: 100vh;
+	z-index: 1;
+}
+
+.char-hide {
+	background: #000;
+}
+
+.char-hide > .char {
+	font-size: 40px;
+	font-weight: lighter;
+}
+
+/* start content css */
+
 .hero {
     width: 100%;
     height: 70vh;
@@ -39,13 +80,25 @@ body.scroll-lock {
     mix-blend-mode: difference;
 }
 
+.hero > .content > h1 {
+    color: #e6e6e6;
+}
+
+.hero > .content > h1 > .sub {
+    color: #ababab;
+    padding-left: 8px;
+    font-size: 50%;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
 .main-content {
-    margin-top: 50vh;
+    margin-top: 60vh;
 }
 
 .main-content > .left {
     height: 100%;
-    margin: 10vw 0 0 10vw
+    margin: 20vh 0 0 10vw
 }
 
 .main-content > .right {
@@ -53,10 +106,29 @@ body.scroll-lock {
     margin: 0 0 0 10vw
 }
 
-.js-section > .banner {
-    height: 75vh;
-    width: 100%;
+.js-section {
+    cursor: pointer;
     margin-top: 10vh;
+}
+
+.js-section.appear {
+    transform: translate(0%) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.js-section > .banner {
+    height: 95vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.js-section > .banner > .inner {
+    transition: 1s all cubic-bezier(0.68, 0.37, 0, 1.01);
+}
+
+.js-section:hover > .banner > .inner {
+    transform: scale(1.1)
 }
 
 .js-section > .sub-info {
@@ -65,8 +137,11 @@ body.scroll-lock {
 }
 
 .js-section > .sub-info > .sub {
-    color: #cecece;
-    padding-bottom: 10px;
+    color: #ababab;
+    padding-bottom: 8px;
+    font-size: 85%;
+    letter-spacing: 2px;
+    font-weight: 900;
 }
 
 .js-section > .sub-info > .title > h2 {
