@@ -2,13 +2,12 @@ $(document).ready(function() {
 
 console.log('App loaded');
 
-let $bodyheight = 0;
-const $contentMargin = ($('.hero .banner').outerHeight(true) /100) * 100;// 80 = standaard
 function start() {
-    $('.main-content .left .js-section').each(function() {
+    let $bodyheight = 0;
+    $('.js-section').each(function() {
         $bodyheight += $(this).outerHeight(true);
     });
-    $("body").css("height", + $bodyheight + $contentMargin + "px");
+    $(".js-fake-page").css("height", + $bodyheight + "px");
 }
 
 $(window).on('scroll', function() {
@@ -18,9 +17,9 @@ $(window).on('scroll', function() {
 
 var controller = new ScrollMagic.Controller();
 
-TweenMax.set('.js-section', {yPercent: 30, autoAlpha: 0, ease: Power3.easeOut});
+TweenMax.set('.case', {yPercent: 30, autoAlpha: 0, ease: Power3.easeOut});
 
-$('.js-section').each(function() {
+$('.case').each(function() {
 	// build a scene
 	var scene1 = new ScrollMagic.Scene({
 		triggerElement: this,
@@ -31,15 +30,6 @@ $('.js-section').each(function() {
 	.addTo(controller);
 });
 
-var scene2 = new ScrollMagic.Scene({
-	triggerElement: '.main-content',
-    triggerHook: 0.6,
-    duration: '60%'
-})
-.setTween('.hero', 1, {autoAlpha: 0, ease: Power3.easeOut})
-.addTo(controller);
-
-/*startload*/
 const countI = document.querySelector('.count .inner');
 const loader = document.querySelector('.loader');
 const preLoader = document.querySelector('.preloader');
@@ -113,9 +103,6 @@ TweenMax.set('.main-content', {
     yPercent: 100,
 	opacity: 0
 });
-TweenMax.set('.hero', {
-    yPercent: 200
-});
 TweenMax.set('.scroll', {
     autoAlpha: 0,
     yPercent: 20
@@ -133,10 +120,6 @@ function preload() {
                     TweenMax.to('.main-content', 1.4, {
                         yPercent: 0,
 						opacity: 1,
-                        ease: Power3.easeOut
-                    });
-                    TweenMax.to('.hero', 1.4, {
-                        yPercent: 0,
                         ease: Power3.easeOut
                     });
                     TweenMax.to('.scroll', 1, {
@@ -166,6 +149,10 @@ function preload() {
         });
     }, 2000)
 }
+
+Barba.Pjax.Dom.wrapperId = 'app';
+Barba.Pjax.Dom.containerClass = 'main-content';
+
 Barba.Pjax.start();
 
 

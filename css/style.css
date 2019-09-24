@@ -8,21 +8,23 @@ Author URI: https://www.achoendov.nl
 @font-face {font-family: 'lunchtype22 medium';src: url('fonts/lunchtype/lunchtype22-medium-web.ttf');}
 @font-face {font-family: 'Graphik';font-style: normal;font-weight: normal;src: url('../fonts/graphik/Graphik-Regular.ttf');}
 
+/*
+html::-webkit-scrollbar {
+    display: none;
+}
+*/
 html,
 body {
 	width: 100%;
-	height: 100%;
-	transition: all 300ms cubic-bezier(1,.13,.42,.91);
+}
+
+body {
+    height: 100vh;
 	background-color: #000;
-	overflow-x: hidden;
 }
 
 body.scroll-lock {
 	overflow: hidden;
-}
-
-::-webkit-scrollbar {
-    display: none;
 }
 
 .loader {
@@ -92,51 +94,47 @@ body.scroll-lock {
     font-weight: 900;
 }
 
-.main-content {
-    margin-top: 60vh;
-}
-
-.main-content > .left {
+.cases > .left {
     height: 100%;
     margin: 20vh 0 0 10vw
 }
 
-.main-content > .right {
+.cases > .right {
     height: 100%;
     margin: 0 0 0 10vw
 }
 
-.js-section {
+.case {
     cursor: pointer;
     margin-top: 10vh;
 }
 
-.js-section.appear {
+.case.appear {
     transform: translate(0%) !important;
     opacity: 1 !important;
     visibility: visible !important;
 }
 
-.js-section > .banner {
+.case > .banner {
     height: 95vh;
     width: 100%;
     overflow: hidden;
 }
 
-.js-section > .banner > .inner {
+.case > .banner > .inner {
     transition: 1s all cubic-bezier(0.68, 0.37, 0, 1.01);
 }
 
-.js-section:hover > .banner > .inner {
+.case:hover > .banner > .inner {
     transform: scale(1.1)
 }
 
-.js-section > .sub-info {
+.case > .sub-info {
     margin-top: 2rem;
     padding-bottom: 1rem;
 }
 
-.js-section > .sub-info > .sub {
+.case > .sub-info > .sub {
     color: #ababab;
     padding-bottom: 8px;
     font-size: 85%;
@@ -144,7 +142,7 @@ body.scroll-lock {
     font-weight: 900;
 }
 
-.js-section > .sub-info > .title > h2 {
+.case > .sub-info > .title > h2 {
     font-weight: 100;
 }
 
