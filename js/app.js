@@ -12,7 +12,7 @@ function start() {
 
 $(window).on('scroll', function() {
     let $view = $(this).scrollTop();
-    TweenMax.to('.main-content', 1, {y: -$view, ease: Power3.easeOut});
+    TweenMax.to('.js-section', 1, {y: -$view, ease: Power3.easeOut});
 });
 
 var controller = new ScrollMagic.Controller();
@@ -200,7 +200,7 @@ var FadeTransition = Barba.BaseTransition.extend({
        * Do not forget to call .done() as soon your transition is finished!
        * .done() will automatically remove from the DOM the old Container
        */
-
+        start();
       _this.done();
     });
   }
