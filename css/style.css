@@ -68,6 +68,11 @@ nav {
     background: #00000026;
 }
 
+.main-content {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
 /* responsive */
 
 @media only screen and (max-width: 1319px) {
