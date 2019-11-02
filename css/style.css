@@ -3,10 +3,12 @@ Author: D. Achoendov
 Author URI: https://www.achoendov.nl
 */
 
-@font-face {font-family: 'lunchtype22';src: url('fonts/lunchtype/lunchtype22-regular-web.ttf');}
-@font-face {font-family: 'lunchtype22 light';src: url('fonts/lunchtype/lunchtype22-light-web.ttf');}
-@font-face {font-family: 'lunchtype22 medium';src: url('fonts/lunchtype/lunchtype22-medium-web.ttf');}
-@font-face {font-family: 'Graphik';font-style: normal;font-weight: normal;src: url('../fonts/graphik/Graphik-Regular.ttf');}
+@font-face {
+	font-family: 'which';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../public/Twitchy.TV.otf');
+}
 
 /*
 html::-webkit-scrollbar {
@@ -27,57 +29,44 @@ body.scroll-lock {
 	overflow: hidden;
 }
 
-.step-wrapper {
-    counter-reset: step;
+::-webkit-scrollbar {
+  width: 7px;
 }
 
-.step-unit {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    position: relative;
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 3px;
 }
 
-.step-unit::before {
-    counter-increment: step;
-    content: counter(step);
-    margin: 0 auto;
-    font-family: Verdana;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    border: 2px solid #000;
-    color: #000;
-    line-height: 240%;
-    text-align: center;
+nav {
+    position: fixed;
+    top:0;left:0;right:0;
+    height: 50px;
+    z-index: 1000;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15),0 0px 2px rgba(0,0,0,0.1);
     background: #fff;
 }
 
-.step-unit.active::before {
-    background: #000;
-    border: 2px solid #2196F3;
-    color: #2196F3;
+.logo {
+    padding: 0 1rem;
 }
 
-.step-unit::after {
-    content: "";
-    width: 100%;
-    position: absolute;
-    right: 50%;
-    top: calc(40px /2);
-    height: 2px;
-    background: #000;
-    z-index: -1;
+.nav-item {
+    height: 50px;
+    padding: 0 1rem;
+    cursor: pointer;
 }
 
-.step-unit:first-child::after {
-    display: none;
+#main {
+    padding-top: 50px;
 }
 
-.step-unit.active + .step-unit:after {
-    background: #2196F3;
-
+.side-bar {
+    background: #00000026;
+}
 
 /* responsive */
 

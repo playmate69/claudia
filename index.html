@@ -10,24 +10,32 @@
 
 <body >
 
-<div class="a-wrapper a-container--fluid clearfix">
+<nav class="a-flex">
+    <div class="col-lg-4 a-flex a-align--center">
+        <span class="logo"><img style="margin-right: 5px" src="./public/which_logo_drop-shadow.png" height="25"><img src="./public/which_drop-shadow.png" height="25"></span>
+        <a class="nav-item a-flex a-align-center--center"><span>Ontdekken</span></a>
+        <a class="nav-item a-flex a-align-center--center"><span>Bladeren</span></a>
+    </div>
+    <div class="col-lg-4">
 
-    <div class="step-wrapper a-flex col-xs-12">
-        <div class="step-unit active" data-step>
-            <span>Shipping</span>
-        </div>
-        <div class="step-unit" data-step>
-            <span>Betaling</span>
-        </div>
-        <div class="step-unit" data-step>
-            <span>Bevestigen</span>
-        </div>
     </div>
-    <div class="col-xs-12 a-flex">
-        <span class="step-btn prev a-float--left a-fit--max">Prev step</span>
-        <span class="step-btn next a-float--right a-fit--max">Next step</span>
+    <div class="col-lg-4">
+
     </div>
+</nav>
+
+<div class="js-fake-page" style="height: 6000px"></div>
+
+<main id="main" class="a-fixed a-stick--top a-full">
+
+<div class="side-bar col-lg-2 a-full">
 </div>
+
+<div class="main-content col-lg-10 a-full">
+</div>
+
+</main>
+
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?ver=1"></script>
 <script src="./js/app.js"></script>
 
