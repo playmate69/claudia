@@ -12,7 +12,7 @@ var mySwiper = new Swiper('.stream-slider', {
     speed: 400,
     initialSlide: 2,
     preventInteractionOnTransition: true,
-    allowTouchMove: false,
+
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
