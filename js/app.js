@@ -9,7 +9,7 @@ $(document).on('scroll',  $(window), function() {
 });
 
 var mySwiper = new Swiper('.stream-slider', {
-
+    speed: 400,
     initialSlide: 2,
     preventInteractionOnTransition: true,
     allowTouchMove: false,
