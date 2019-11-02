@@ -8,6 +8,14 @@ $(document).on('scroll',  $(window), function() {
     $('.main-content').css('transform', 'translateY(-'+ view +'px)');
 });
 
-
+var mySwiper = new Swiper('.stream-slider', {
+    speed: 0,
+    initialSlide: 2,
+    allowTouchMove: false,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
 
 });
