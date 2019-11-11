@@ -19,7 +19,9 @@ var mySwiper = new Swiper('.stream-slider', {
 });
 
 mySwiper.on('slideChange', function () {
-
+    $.each([$('.swiper-button-next'), $('.swiper-button-prev')], function(i, v) {
+        console.log(i + ' : ' + v.attr('id'));
+    });
 });
 
 
