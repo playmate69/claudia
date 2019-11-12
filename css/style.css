@@ -142,21 +142,47 @@ nav {
 
 /* ------------------ */
 
+.stream-video-controll-wrapper > .vignette {
+    height: 10%;
+    opacity: .6;
+}
+
 .stream-video-controll-wrapper > .corner {
     padding: .5rem;
 }
 
-.stream-video-controll-wrapper > .corner > span {
+.icon {
     color: #fff;
 }
 
-i + i {
-    margin-left: 5px;
+.icon + .icon {
+    margin-left: 10px;
 }
 
-.stream-video-controll-wrapper > .vignette {
-    height: 10%;
-    opacity: .6;
+.icon.live {
+    color: red;
+    transform: scale(.7);
+}
+.icon.play {
+    transform: scale(.7);
+}
+
+.stream-info {
+    padding: 1rem;
+}
+
+.stream-info > h2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.stream-info > .action {
+    background: #643fa6;
+    color: #fff;
+    padding: .5rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    text-align: center;
 }
 
 /* responsive */
