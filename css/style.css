@@ -110,6 +110,8 @@ nav {
     z-index: -1;
     transform: scale(0.6) translateX(-54%);
     transition: transform .4s cubic-bezier(1, 0.33, 0, 0.95), opacity .4s ease;
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .swiper-slide-prev {
@@ -138,11 +140,24 @@ nav {
     opacity: 1;
 }
 
-.swiper-slide:nth-child(1) {background:purple}
-.swiper-slide:nth-child(2) {background:darkblue}
-.swiper-slide:nth-child(3) {background:green}
-.swiper-slide:nth-child(4) {background:orangered}
-.swiper-slide:nth-child(5) {background:orange}
+/* ------------------ */
+
+.stream-video-controll-wrapper > .corner {
+    padding: .5rem;
+}
+
+.stream-video-controll-wrapper > .corner > span {
+    color: #fff;
+}
+
+i + i {
+    margin-left: 5px;
+}
+
+.stream-video-controll-wrapper > .vignette {
+    height: 10%;
+    opacity: .6;
+}
 
 /* responsive */
 

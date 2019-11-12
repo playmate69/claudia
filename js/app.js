@@ -19,9 +19,12 @@ var mySwiper = new Swiper('.stream-slider', {
 });
 
 mySwiper.on('slideChange', function () {
-    $.each([$('.swiper-button-next'), $('.swiper-button-prev')], function(i, v) {
-        console.log(i + ' : ' + v.attr('id'));
-    });
+    document.querySelector('.swiper-button-prev').style.pointerEvents = "none";
+    document.querySelector('.swiper-button-next').style.pointerEvents = "none";
+    setTimeout(() => {
+        document.querySelector('.swiper-button-prev').style.pointerEvents = "auto";
+        document.querySelector('.swiper-button-next').style.pointerEvents = "auto";
+    }, 400);
 });
 
 
