@@ -143,8 +143,8 @@ nav {
 /* ------------------ */
 
 .stream-video-controll-wrapper > .vignette {
-    height: 10%;
-    opacity: .6;
+    height:18%;
+    opacity: .5;
 }
 
 .stream-video-controll-wrapper > .corner {
@@ -183,6 +183,21 @@ nav {
     margin-top: 1rem;
     border-radius: 5px;
     text-align: center;
+}
+
+.single-video.main-content {
+    padding-top: 50px;
+}
+
+.video-wrapper {
+    height: 80vh;
+    width: 100%;
+    background: #000;
+}
+
+#stream-video {
+    height: 100%;
+    width: auto;
 }
 
 /* responsive */
