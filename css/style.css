@@ -190,7 +190,6 @@ nav {
 }
 
 .video-wrapper {
-    height: 80vh;
     width: 100%;
     background: #000;
 }
@@ -198,6 +197,13 @@ nav {
 #stream-video {
     height: 100%;
     width: auto;
+}
+
+.profile-nav,
+.chat-nav {
+    height: 50px;
+    width: 100%;
+    top: -50px;
 }
 
 /* responsive */
