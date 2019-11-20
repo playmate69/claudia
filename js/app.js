@@ -10,7 +10,7 @@ $(document).on('scroll',  $(window), function() {
 
 var mySwiper = new Swiper('.stream-slider', {
     speed: 400,
-    initialSlide: 2,
+    initialSlide: 0,
     allowTouchMove: false,
     navigation: {
         nextEl: '.swiper-button-next',
