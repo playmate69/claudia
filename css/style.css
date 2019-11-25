@@ -192,6 +192,7 @@ nav {
 .video-wrapper {
     width: 100%;
     background: #000;
+    height: 30vh;
 }
 
 #stream-video {
