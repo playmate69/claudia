@@ -14,7 +14,7 @@ $(document).on('scroll',  $(window), function() {
 
 var mySwiper = new Swiper('.stream-slider', {
     speed: 400,
-    initialSlide: 0,
+    initialSlide: 1,
     allowTouchMove: false,
     navigation: {
         nextEl: '.swiper-button-next',
@@ -49,8 +49,5 @@ $(document).on('click',  '.chat__btn', function() {
         $('.chat__input').val('');
     }
 });
-
-
-
 
 });

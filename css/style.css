@@ -70,7 +70,7 @@ nav {
 }
 
 .side-bar {
-    background: #00000026;
+    background: #efeff1;
 }
 
 .main-content {
@@ -197,31 +197,43 @@ nav {
     background: #2f3032;
 }
 
-.profile-nav,
+.recommended-msg {
+    padding: 1rem;
+}
+
+.profile-wrapper {
+    border-left: 1px solid #00000026;
+}
+
+.profile,
 .chat-nav {
     height: 50px;
     width: 100%;
 }
 
-.profile-nav {
+.profile {
     padding: 5px 0;
-    border-right: 1px solid #00000026;
 }
 
-.profile-nav__pf {
+.profile__pf {
     height: 40px;
     width: 40px;
     border-radius: 50%;
 }
 
-.profile-nav__pf,
-.profile-nav__user-name,
-.profile-nav__verified,
-.profile-nav__live {
+.profile--recommended > .profile__pf {
+    height: 30px;
+    width: 30px;
+}
+
+.profile__pf,
+.profile__user-name,
+.profile__verified,
+.profile__live {
     margin-left: .5rem;
 }
 
-.profile-nav__sub {
+.profile__sub {
     top: 50%;
     transform: translateY(-50%);
     padding: .4rem;
@@ -231,7 +243,7 @@ nav {
     margin-right: 1rem;
 }
 
-.profile-nav__live {
+.profile__live {
     padding: .3rem;
     background: red;
     color: #fff;
@@ -239,8 +251,12 @@ nav {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 13px;
+    font-weight: bolder;
 }
-
+.profile--recommended > .profile__live {
+    padding: .2rem;
+    font-size: 10px;
+}
 .chat-nav {
     border-bottom: 1px solid #00000026;
 }
@@ -250,6 +266,7 @@ nav {
     height: calc(100vh - 100px);
     top: 50px;
 }
+.chat-nav:before,
 .chat::before {
     content: "";
     position: absolute;
