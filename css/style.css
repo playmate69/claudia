@@ -80,10 +80,6 @@ nav {
     margin: 0 auto;
 }
 
-.stream-slider {
-
-}
-
 .swiper-wrapper {
     transform: translate3d(0,0,0) !important;
 }
@@ -185,10 +181,6 @@ nav {
     text-align: center;
 }
 
-.single-video.main-content {
-    padding-top: 50px;
-}
-
 .video-wrapper {
     width: 100%;
     background: #000;
@@ -204,7 +196,42 @@ nav {
 .chat-nav {
     height: 50px;
     width: 100%;
-    top: -50px;
+}
+
+.profile-nav {
+    padding: 5px 0;
+    border-right: 1px solid #00000026;
+}
+
+.profile-nav__pf {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.profile-nav__pf,
+.profile-nav__user-name {
+    margin-left: .5rem;
+}
+
+.profile-nav__sub {
+    top: 50%;
+    transform: translateY(-50%);
+    padding: .4rem;
+    background: #ad77ff;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+
+.chat-nav {
+    border-bottom: 1px solid #00000026;
+}
+
+.chat {
+    width: 100%;
+    height: calc(100vh - 100px);
+    top: 50px;
 }
 
 /* responsive */
