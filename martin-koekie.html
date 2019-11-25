@@ -31,29 +31,43 @@
 <div class="side-bar col-lg-2 a-full">
 </div>
 
-<div class="main-content single-video col-lg-10 a-full">
+<div class="main-content single-video col-lg-10 a-full a-flex">
 
-    <div class="col-lg-8 a-flex vertical a-relative">
+    <div style="width:75%" class="a-full a-flex vertical a-relative">
         <div class="profile-nav a-relative">
             <div class="a-flex a-align--center">
                 <span class="profile-nav__pf a-overflow--hidden a-img--bg" style="background-image: url(https://static-cdn.jtvnw.net/jtv_user_pictures/fbe7b074-37fa-46f2-872e-c99f82b0f51c-profile_image-70x70.png)"></span>
                 <span class="profile-nav__user-name">martin_koekie</span>
+                <span class="profile-nav__verified a-flex a-align-center"><svg style="fill: #ad77ff;" width="20px" height="20px" version="1.1" viewBox="0 0 20 20" x="0px" y="0px"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 2l6 2 2 6-2 6-6 2-6-2-2-6 2-6 6-2zM8.889 13.636l5.43-5.429-1.415-1.414-4.015 4.015-2.015-2.015-1.414 1.414 3.429 3.43z"></path></svg></span>
+                <span class="profile-nav__live">Live</span>
                 <span class="profile-nav__sub a-absolute right"><i class="far fa-heart"></i> Abonneer</span>
             </div>
         </div>
 
         <div class="video-wrapper a-overflow--hidden">
-            <video id="stream-video" autoplay loop><source src="https://clips-media-assets2.twitch.tv/216636065-offset-3442.mp4" type="video/mp4"></video>
+            <video id="stream-video" class="a-full" autoplay controls muted loop><source src="https://clips-media-assets2.twitch.tv/216636065-offset-3442.mp4" type="video/mp4"></video>
         </div>
     </div>
     
-    <div class="col-lg-4">
-        <div class="chat-wrapper a-relative col-lg-4 col-md-4"> 
+    <div style="width:25%" class="a-full">
+        <div class="chat-wrapper a-full a-relative"> 
             <div class="chat-nav a-absolute top left">
                 <div class="a-flex a-align--center">
                     <span class="chat-nav__msg a-absolute center">Stream chat</span>
                 </div>
-                <div class="chat a-absolute"></div>
+                <div class="chat a-absolute a-flex vertical">
+                    <div class="chat__wrap">
+                        <div class="chat__single a-flex">
+                            <span class="chat__single__name"><strong>Anita</strong></span>
+                            <span class="chat__single__msg">Wat een leuke stream!</span>
+                        </div>
+                    </div>
+                    <div class="chat__msg-box a-absolute a-stick--bottom a-flex vertical">
+                        <span class="chat__msg">Chat hier mee!</span>
+                        <input class="chat__input" placeholder="Een bericht sturen">
+                        <div><span class="chat__btn a-float--right">Chat</span></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
