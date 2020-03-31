@@ -132,8 +132,6 @@ a, p , span, h1, h2, h3, h4, h5, h6, li {
 .article {
     padding: 10vh 0;
     position: relative;
-    display: flex;
-    align-items: center;
 }
 
 .text-block,
@@ -180,10 +178,11 @@ a, p , span, h1, h2, h3, h4, h5, h6, li {
     transform: scale(1.2);
 }
 
-.bg-vid, .bg-img, .shadow, .stats {
+.bg-vid, .bg-img, .shadow {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
 }
 
 .shadow {
