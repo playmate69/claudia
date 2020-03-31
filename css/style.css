@@ -17,309 +17,226 @@ html::-webkit-scrollbar {
 */
 
 * {
-    user-select: none;
-}
-
-html,
-body {
-	width: 100%;
-}
-
-body {
-    height: 100vh;
-	background-color: #fff;
-}
-
-body.scroll-lock {
-	overflow: hidden;
-}
-
-::-webkit-scrollbar {
-  width: 7px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: #555;
-  border-radius: 3px;
-}
-
-nav {
-    position: fixed;
-    top:0;left:0;right:0;
-    height: 50px;
-    z-index: 1000;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.15),0 0px 2px rgba(0,0,0,0.1);
-    background: #fff;
-}
-
-.logo {
-    padding: 0 1rem;
-}
-
-.nav-item {
-    height: 50px;
-    padding: 0 1rem;
-    cursor: pointer;
-}
-
-#main {
-    padding-top: 50px;
-}
-
-.side-bar {
-    background: #efeff1;
-}
-
-.main-content {
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-
-.stream-slider-wrapper {
-    height: 45vh;
-    max-width: 60%;
-    margin: 0 auto;
-}
-
-.swiper-wrapper {
-    transform: translate3d(0,0,0) !important;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-    position: absolute;
-    top: 50%;
-    padding: 2vh;
-    cursor: pointer;
-}
-.swiper-button-prev {
-    left: -15vw;
-    transform: translate(50%, -50%);
-}
-.swiper-button-next {
-    right: -15vw;
-    transform: translate(-50%, -50%);
-}
-.swiper-slide {
-    flex: 1 0 100%;
-    opacity: 0;
-    position:  fixed;
-    z-index: -1;
-    transform: scale(0.6) translateX(-54%);
-    transition: transform .4s cubic-bezier(1, 0.33, 0, 0.95), opacity .4s ease;
-    background: #fff;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.swiper-slide-prev {
-    transform: scale(0.8) translateX(-20%);
-    z-index: 0;
-}
-
-.swiper-slide-next {
-    transform: scale(0.8) translateX(20%);
-    z-index: 1;
-}
-
-.swiper-slide-next + .swiper-slide {
-    transform: scale(0.6) translateX(54%);
-    z-index: 0;
-}
-
-.swiper-slide-active {
-    transform: scale(1);
-    z-index: 2;
-}
-
-.swiper-slide-prev,
-.swiper-slide-next,
-.swiper-slide-active {
-    opacity: 1;
-}
-
-/* ------------------ */
-
-.stream-video-controll-wrapper > .vignette {
-    height:18%;
-    opacity: .5;
-}
-
-.stream-video-controll-wrapper > .corner {
-    padding: .5rem;
-}
-
-.icon {
-    color: #fff;
-}
-
-.icon + .icon {
-    margin-left: 10px;
-}
-
-.icon.live {
-    color: red;
-    transform: scale(.7);
-}
-.icon.play {
-    transform: scale(.7);
-}
-
-.stream-info {
-    padding: 1rem;
-}
-
-.stream-info > h2 {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
-
-.stream-info > .action {
-    background: #643fa6;
-    color: #fff;
-    padding: .5rem;
-    margin-top: 1rem;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.video-wrapper {
-    width: 100%;
-    background: #000;
-    height: 60vh;
-}
-
-#stream-video {
-    object-fit: contain;
-    background: #2f3032;
-}
-
-.recommended-msg {
-    padding: 1rem;
-}
-
-.profile-wrapper {
-    border-left: 1px solid #00000026;
-}
-
-.profile,
-.chat-nav {
-    height: 50px;
-    width: 100%;
-}
-
-.profile {
-    padding: 5px 0;
-}
-
-.profile__pf {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-}
-
-.profile--recommended > .profile__pf {
-    height: 30px;
-    width: 30px;
-}
-
-.profile__pf,
-.profile__user-name,
-.profile__verified,
-.profile__live {
-    margin-left: .5rem;
-}
-
-.profile__sub {
-    top: 50%;
-    transform: translateY(-50%);
-    padding: .4rem;
-    background: #ad77ff;
-    color: #fff;
-    border-radius: 5px;
-    margin-right: 1rem;
-}
-
-.profile__live {
-    padding: .3rem;
-    background: red;
-    color: #fff;
-    border-radius: 5px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 13px;
-    font-weight: bolder;
-}
-.profile--recommended > .profile__live {
-    padding: .2rem;
-    font-size: 10px;
-}
-.chat-nav {
-    border-bottom: 1px solid #00000026;
-}
-
-.chat {
-    width: 100%;
-    height: calc(100vh - 100px);
-    top: 50px;
-}
-.chat-nav:before,
-.chat::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    height: 100%;
-    width: 1px;
-    background: #00000026;
-}
-input {
-    background: #141414;
-}
-input::placeholder {
-    color: #fff;
-}
-
-.chat__wrap {
-    overflow-y: scroll;
-}
-
-.chat__msg-box {
-    padding: 1rem;    
-    background: #2f3032;
-}
-.chat__msg {
-    padding: .5rem 0;
-    border-top: 1px solid #ffffff26;
-    text-align: left;
-    font-weight: bolder; 
-    color: #fff;
-}
-
-.chat__btn {
-    background: #ad77ff;
-    padding: .5rem;
-    margin-top: .5rem;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.chat__btn:hover {
-    background: #643fa6;
-}
-
-.chat__single {
-    padding: .5rem 0;
-    margin: 0 1rem;
-    /*border-bottom: 1px solid #ad77ff;*/
-}
-.chat__single:last-child {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	outline: none;
     border: none;
 }
 
-.chat__single__name {
-    margin-right: 10px;
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.full {
+    width: 100%;
+    height: 100%;
+}
+
+.flex {
+    display: flex;
+}
+.flex.vertical {
+    flex-direction: column;
+}
+.flex.align-center {
+    align-items: center;
+}
+.flex.justify-center {
+    justify-content: center;
+}
+.flex.justify-between {
+    justify-content: space-between;
+}
+.flex.justify-around {
+    justify-content: space-around;
+}
+
+a, p , span, h1, h2, h3, h4, h5, h6, li {
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+}
+
+.nav {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    /* https://cssgradient.io/ */
+    background: rgba(0, 0, 0, 0.52);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.52) 0%, rgba(255,255,255,0) 100%);
+}
+
+.nav__left,
+.nav__right {
+    position: absolute;
+    top: 0;
+    height: 60px;
+}
+
+.nav__left {
+    left: 0;
+}
+
+.nav__right {
+    right: 0;
+}
+
+.nav__item {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav__item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: -1;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: all .4s ease;
+}
+
+.nav__item:hover::before {
+    transform-origin: top;
+    transform: scaleY(1); 
+}
+
+.page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.article {
+    padding: 10vh 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.text-block,
+.img-block {
+    width: 50%;
+    flex: 0 1 50%;  
+}
+
+.text-block.right {
+    margin-left: auto;
+    width: 50%;
+}
+
+.img-block {
+    overflow: hidden;
+    height: 500px;
+    position: relative;
+    padding: 1rem;
+}
+
+.img-block > .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero.quarter {
+    height: 75vh;
+}
+
+.bg-vid {
+    overflow: hidden;
+}
+
+.bg-vid > .video {
+    transform: scale(1.2);
+}
+
+.bg-vid, .bg-img, .shadow, .stats {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.shadow {
+    background-color: #0000007a;
+}
+
+.stats__stat {
+    flex: 1;
+    text-align: center;
+    padding: 0 3rem;
+}
+
+.quote,
+.cta.center  {
+    text-align: center;
+}
+
+.cta.offset {
+    margin-top: 3rem;
+}
+
+.cta > a {
+    padding: 1rem;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    transition: all .4s ease;
+    z-index: 1;
+}
+
+.cta > a:hover {
+    color: #000;
+}
+
+
+.cta > a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: -1;
+    transform: translateX(-100%);
+    transition: all .4s ease;
+}
+
+.cta > a:hover::before {
+    transform: translateX(0%);
 }
 
 /* responsive */
