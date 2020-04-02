@@ -140,22 +140,14 @@ a, p , span, h1, h2, h3, h4, h5, h6, li {
     flex: 0 1 50%;  
 }
 
-.text-block.right {
-    margin-left: auto;
-    width: 50%;
-}
-
 .img-block {
     overflow: hidden;
     height: 500px;
     position: relative;
-    padding: 1rem;
+    padding: 3rem;
 }
 
 .img-block > .bg {
-    position: absolute;
-    top: 0;
-    left: 0;
     height: 100%;
     width: 100%;
     background-size: cover;
@@ -187,6 +179,14 @@ a, p , span, h1, h2, h3, h4, h5, h6, li {
 
 .shadow {
     background-color: #0000007a;
+}
+
+.stats__container {
+    width: 100%
+}
+
+.table-layout > span {
+    padding-left: 1rem
 }
 
 .stats__stat {
